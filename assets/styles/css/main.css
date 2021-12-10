@@ -1,0 +1,195 @@
+/* Font weight */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFA;
+}
+
+.title {
+  margin-top: 8rem;
+  text-align: center;
+}
+.title h1 {
+  font-style: normal;
+  font-weight: 200;
+  font-size: 3.6rem;
+  line-height: 5.4rem;
+  /* identical to box height */
+  letter-spacing: 0.25px;
+}
+.title h1:nth-of-type(1) {
+  font-weight: 200;
+}
+.title h1:nth-of-type(2) {
+  font-weight: 600;
+}
+.title p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  letter-spacing: 0.104167px;
+  color: #4d4f62;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  width: 54rem;
+  margin-top: 1.6rem;
+}
+@media screen and (max-width: 1110px) {
+  .title h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.166667px;
+    color: #4c4e61;
+  }
+  .title p {
+    width: 31rem;
+  }
+}
+
+.content {
+  width: 53rem;
+  max-width: 53rem;
+  height: 53rem;
+  max-height: 53rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 6.4rem;
+}
+@media screen and (max-width: 1110px) {
+  .content {
+    flex-direction: column;
+    margin-top: 7.6rem;
+    width: unset;
+    max-width: unset;
+    height: unset;
+    max-height: unset;
+    margin-bottom: 7.8rem;
+  }
+}
+.content div {
+  flex: 1 1 0;
+  margin: 0 1rem;
+}
+@media screen and (max-width: 1110px) {
+  .content div {
+    margin: 0 0;
+  }
+}
+.content div.left,
+.content div.rigth {
+  display: flex;
+  align-items: center;
+}
+.content div.left .card {
+  border-top: 0.3rem solid #45d3d3;
+}
+.content div.rigth .card {
+  border-top: 0.3rem solid #549ef2;
+}
+.content div.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content div.middle .card:nth-child(1) {
+  border-top: 0.3rem solid #ea5353;
+}
+.content div.middle .card:nth-child(2) {
+  border-top: 0.3rem solid #fcaf4a;
+}
+@media screen and (max-width: 1110px) {
+  .content div.middle .card {
+    margin: 2.3rem 0;
+  }
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 8px;
+  width: 35rem;
+  max-width: 35rem;
+  height: 25rem;
+  max-height: 25rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3.2rem;
+}
+.card div {
+  flex: 1 1 0;
+}
+.card div h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #4c4e61;
+}
+.card div p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  /* or 177% */
+  letter-spacing: 0.0902778px;
+  color: #4c4e61;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.card div:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.card div:nth-child(2) img {
+  max-height: 6.4rem;
+  max-width: 6.4rem;
+}
+@media screen and (max-width: 1110px) {
+  .card {
+    width: 31rem;
+    max-width: 31rem;
+    height: 22rem;
+    max-height: 22rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

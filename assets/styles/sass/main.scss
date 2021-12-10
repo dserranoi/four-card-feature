@@ -1,0 +1,227 @@
+// VARIABLES
+// COLORS
+$red-color: hsl(0, 78%, 62%);
+$cyan-color: hsl(180, 62%, 55%);
+$orange-color: hsl(34, 97%, 64%);
+$blue-color: hsl(212, 86%, 64%);
+//NEUTRAL COLORS
+$darkblue-color: hsl(234, 12%, 34%);
+$grayishblue-color: hsl(229, 6%, 66%);
+$ligthgray: hsl(0, 0%, 98%);
+//FONT FAMILY
+$fontfamily: "Poppins";
+/* Font weight */
+$font-weight-200: 200;
+$font-weight-400: 400;
+$font-weight-600: 600;
+
+@mixin mobile-small {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+@mixin desktop-small {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+    @media screen and (max-width: 1110px) {
+        @content;
+    }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $fontfamily, sans-serif;
+  font-size: 62.5%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAFAFA;
+}
+
+.title {
+  margin-top: 8rem;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  text-align: center;
+  h1 {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 3.6rem;
+    line-height: 5.4rem;
+    /* identical to box height */
+    letter-spacing: 0.25px;
+
+    &:nth-of-type(1) {
+      font-weight: 200;
+    }
+    &:nth-of-type(2) {
+      font-weight: 600;
+    }
+  }
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    letter-spacing: 0.104167px;
+    color: #4d4f62;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    width: 54rem;
+    margin-top: 1.6rem;
+  }
+  @include desktop-small {
+    h1 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2.4rem;
+      line-height: 3.6rem;
+      /* identical to box height */
+      text-align: center;
+      letter-spacing: 0.166667px;
+      color: $darkblue-color;
+    }
+    p{width: 31rem;}
+  }
+}
+
+.content {
+  width: 53rem;
+  max-width: 53rem;
+  height: 53rem;
+  max-height: 53rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 6.4rem;
+  @include desktop-small {
+    flex-direction: column;
+    margin-top: 7.6rem;
+    width: unset;
+    max-width: unset;
+    height: unset;
+    max-height: unset;
+    margin-bottom: 7.8rem;
+  }
+  div {
+    flex: 1 1 0;
+    margin: 0 1rem;
+    @include desktop-small {
+        margin: 0 0;
+    }
+  }
+  div.left,
+  div.rigth {
+    display: flex;
+    align-items: center;
+  }
+  div.left {
+    .card {
+      border-top: 0.3rem solid $cyan-color;
+    }
+  }
+  div.rigth {
+    .card {
+      border-top: 0.3rem solid $blue-color;
+    }
+  }
+  div.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .card:nth-child(1) {
+      border-top: 0.3rem solid $red-color;
+    }
+    .card:nth-child(2) {
+      border-top: 0.3rem solid $orange-color;
+    }
+    @include desktop-small {
+      .card {
+        margin: 2.3rem 0;
+      }
+    }
+  }
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 8px;
+  width: 35rem;
+  max-width: 35rem;
+  height: 25rem;
+  max-height: 25rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3.2rem;
+  div {
+    flex: 1 1 0;
+    h3 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 3rem;
+      color: $darkblue-color;
+    }
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.3rem;
+      line-height: 2.3rem;
+      /* or 177% */
+      letter-spacing: 0.0902778px;
+      color: $darkblue-color;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+  }
+  div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    img {
+      max-height: 6.4rem;
+      max-width: 6.4rem;
+    }
+  }
+
+  @include desktop-small {
+    width: 31rem;
+    max-width: 31rem;
+    height: 22rem;
+    max-height: 22rem;
+  }
+}
